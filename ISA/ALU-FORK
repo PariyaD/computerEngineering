@@ -247,6 +247,18 @@ void XOR(uint32_t* r_destination, uint32_t* r1, uint32_t* r2)
 //STORE
 //SLT 
 //NOT
+void NOT(uint32_t* r_destination, uint32_t* r1)
+{
+  memcpy(&r1_i, r1, sizeof(uint32_t));
+    
+  //operation
+  rd_f = !(r1_i);
+  
+  // memory write
+  memcpy(r_destination, &rd_i, sizeof(uint32_t));
+  
+}
+
 
 //CONSOLE
 void CONSOLE(uint32_t* registerToPrint)
